@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliane Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- HEADER / HOME -->
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/my passport.jpg" class="logo" alt="Logo">
+        <ul>
+          <li><a href="#header" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">Professional Background</a></li>
+          <li><a href="#portofolo" class="nav-link">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link">Contact Me</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Content -->
+      <div class="header-section">
+        <div class="header_text">
+          <h1>Hi, I'm <span>Eliane Ineza</span><br>Data Analyst | Software Developer </h1>
+          <p>Turning Data & Ideas into Solutions</p> 
+          <a href="#portofolo" class="btn">View My Work</a>
+        </div>
+
+        <div class="header_image">
+          <img src="images/my passport.jpg" alt="Eliane Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="obaut-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            Hello! I'm Eliane Ineza from Kigali, Rwanda. I study Business Information Technology and specialize in Data Analytics,
+             Software Development, and Business Intelligence. I enjoy analyzing data, building web and software applications, 
+             and presenting insights that make an impact.
+          </p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Educations</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Data Analytics & Visualization</span><br><p><strong>Tools:</strong> Python (Pandas, NumPy, Matplotlib, Seaborn, Plotly/Dash), Power BI, Looker Studio, Excel</p></li>
+              <li><span>Software Development & Programming</span><br><p><strong>Tools:</strong> HTML, CSS, JavaScript, PHP, MySQL, Java, Python</p></li>
+              
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2025 - October</span><br>Data Analyst Intern at kLab</li>
+            
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2022 - 2025</span><br>Bachelor in Business Information Technology – University of Rwanda</li>
+              <li><span>2018 - 2021</span><br>Networking – ACEJ TVET School</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+
+      <div class="services-list">
+        <div>
+          <h2>Data Analysis & Insights</h2>
+          <p>I transform raw data into actionable insights, creating dashboards and visualizations that guide smart business decisions.</p>
+          <a href="#">Learn more</a>
+        </div>
+
+        <div>
+          <h2>Software & Web Development</h2>
+          <p>I build interactive websites and applications that solve problems, improve user experience, and streamline processes.</p>
+          <a href="#">Learn more</a>
+        </div>
+
+        <div>
+          <h2>Business Reporting & Dashboards</h2>
+          <p>I prepare and present business data clearly, developing reports and dashboards to support decision-making efficiently.</p>
+          <a href="#">Learn more</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <div id="portofolo">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+
+      <div class="work_list">
+        <div class="work">
+          <img src="images/Screenshot 2025-07-03 213939.png">
+          <div class="layer">
+            <h3>Looker Studio Dashboard</h3>
+            <p>My interactive data dashboard.</p>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="images/Screenshot 2025-07-03 231221.png">
+          <div class="layer">
+            <h3>Power BI Dashboard</h3>
+            <p>House listing dashboard for Rwanda.</p>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="images/Screenshot 2025-07-27 202603.png">
+          <div class="layer">
+            <h3>Python Dashboarding</h3>
+            <p>Financial inclusion and digital payment analysis.</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="btn">See More</a>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact">
+    <div class="container">
+      <h1 class="main-title">Contact Me</h1>
+      <div class="row">
+        <div class="contact-left">
+          <p><i class="fas fa-paper-plane"></i>inezaeliane0@gmail.com</p>
+          <p><i class="fas fa-phone-square-alt"></i>0786230115</p>
+          <div class="sociol-icons">
+            <a href="https://github.com/inezaeliane/" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/eliane-ineza-460064334/" target="_blank">LinkedIn</a>
+          </div>
+          <a href="images/Ineza Eliane CV template.pdf" download class="btn btn2">Download CV</a>
+        </div>
+
+        <div class="contact-right">
+          <form>
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>© Eliane. My Portfolio</p>
+  </div>
+
+  <script>
+    // Tabs
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    // Highlight active nav link on scroll
+    const sections = document.querySelectorAll("div[id]");
+    const navLi = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 90; // offset for fixed nav
+        if(pageYOffset >= sectionTop){
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLi.forEach(li => {
+        li.classList.remove("active-link-nav");
+        if(li.getAttribute("href") === "#" + current){
+          li.classList.add("active-link-nav");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

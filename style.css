@@ -1,0 +1,481 @@
+/* GLOBAL STYLES */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background: #0A1A2F; /* Dark Navy */
+  color: white;
+}
+
+/* ---------------- HEADER ---------------- */
+
+#header{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.container{
+  width: 100%;
+  padding: 10px 10%;
+}
+
+/* ---------------- NAVIGATION ---------------- */
+nav {
+  position: fixed;        /* Keep nav always visible */
+  top: 0;                 /* Stick to top */
+  left: 0;
+  width: 100%;
+  background-color: #0A1A2F; /* Same as header background */
+  z-index: 1000;          /* Make sure nav is above other content */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 10%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* optional shadow */
+}
+
+/* Adjust body content to avoid overlapping nav */
+body {
+  padding-top: 50px; /* Adjust based on nav height */
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: #F4F8FB; /* Light Text */
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #237887;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+
+/* HEADER SECTION */
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_text {
+  flex-basis: 50%;
+  margin-top: 15%;
+  font-size: 30px;
+}
+
+.header_text h1 {
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.header_text h1 span {
+  color: #237887; /* Teal */
+  font-weight: 700;
+}
+
+.header_image {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.header_image img {
+  width: 80%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* ---------------- ABOUT SECTION ---------------- */
+#about {
+  padding: 80px 10%;
+  background-color: #0A1A2F; /* dark background for contrast */
+  color: #fff;
+}
+
+#about .sub-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff; /* highlight color */
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+/* Tab Titles */
+.tab-titles {
+  display: flex;
+  gap: 30px; /* space between tabs */
+  margin-bottom: 30px;
+  border-bottom: 2px solid #333; /* underline for tabs */
+  padding-bottom: 10px;
+}
+
+.tab-links {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.tab-links:hover {
+  color: #00bcd4;
+}
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #00bcd4;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.tab-links.active-link {
+  color: #00bcd4;
+}
+
+.tab-links.active-link::after {
+  width: 100%;
+}
+
+/* Tab Contents */
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+.tab-contents ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tab-contents ul li {
+  margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 1.6;
+  padding-left: 10px;
+  position: relative;
+}
+
+.tab-contents ul li span {
+  font-weight: 600;
+  color: #00bcd4;
+  font-size: 20px;
+}
+
+/* Optional: small decorative bullet before each li */
+.tab-contents ul li::before {
+  content: '•';
+  color: #00bcd4;
+  font-weight: bold;
+  display: inline-block;
+  width: 20px;
+  margin-left: -20px;
+}
+
+
+/* ---------------- SERVICES ---------------- */
+
+#services{
+  padding: 50px 0;
+}
+
+.services-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.services-list div{
+  background: #132542; /* Soft Navy */
+  padding: 40px;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.services-list div:hover{
+  background: #237887;
+  transform: translateY(-10px);
+}
+
+.services-list h2{
+  font-size: 27px;
+  margin-bottom: 15px;
+  color: #F4F8FB;
+}
+
+/* ---------------- PORTFOLIO ---------------- */
+
+#portofolo{
+  padding: 80px 0;
+}
+
+.work_list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.work{
+  flex-basis: 32%;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img{
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.layer{
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #237887);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.work:hover img{
+  transform: scale(1.1);
+}
+
+.work:hover .layer{
+  height: 100%;
+}
+
+.btn{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  padding: 14px 40px;
+  border-radius: 6px;
+  border: 1px solid #237887;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.btn:hover{
+  background: #237887;
+}
+
+/* ---------------- CONTACT ---------------- */
+/* ---------------- CONTACT SECTION ---------------- */
+#contact {
+  padding: 80px 10%;
+  background: #0A1A2F; /* Dark Background */
+  color: #F4F8FB; /* Light Text */
+  font-family: 'Poppins', sans-serif;
+  text-align: center; /* Heading centered */
+}
+
+/* MAIN HEADING */
+#contact .main-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff; /* Teal highlight */
+  margin-bottom: 60px;
+}
+
+/* ROW */
+#contact .row {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left; /* Keep content aligned left */
+}
+
+/* LEFT COLUMN */
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-left p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #F4F8FB;
+}
+
+.contact-left .sociol-icons {
+  margin: 20px 0;
+}
+
+.contact-left .sociol-icons a {
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: 600;
+  color: #237887;
+  transition: 0.3s;
+}
+
+.contact-left .sociol-icons a:hover {
+  color: #0A1A2F;
+  background: #237887;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.contact-left .btn2 {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #237887;
+  color: #F4F8FB;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.contact-left .btn2:hover {
+  background: #0F6A72;
+  color: #F4F8FB;
+}
+
+/* RIGHT COLUMN - FORM */
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-right input,
+.contact-right textarea {
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #237887;
+  background: #132542;
+  color: #F4F8FB;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+  outline: none;
+  border-color: #0F6A72;
+}
+
+.contact-right .btn2 {
+  background: #237887;
+  color: #F4F8FB;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-right .btn2:hover {
+  background: #0F6A72;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #contact .row {
+      flex-direction: column;
+      gap: 40px;
+  }
+}
+
+
+.copyright i{
+  color: #237887;
+}
+
+
+.logo {
+  width: 60px;          /* size of the logo */
+  height: 60px;         /* same as width to make it perfect circle */
+  border-radius: 50%;   /* makes it circular */
+  border: 2px solid #237887; /* optional border for style */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+
+
+.copyright {
+  position: fixed;     /* Fixes copyright to bottom */
+  bottom: 0;           /* Stick to bottom */
+  left: 0;
+  width: 100%;
+  z-index: 999;        /* Slightly below header if overlapping */
+  background-color: #132542;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  border-top: 2px solid #237887;
+}
+
+/* Optional: adjust content to not go under copyright */
+body {
+  padding-bottom: 60px; /* Adjust according to copyright height */
+}
